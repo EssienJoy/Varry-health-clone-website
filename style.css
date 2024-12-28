@@ -74,6 +74,7 @@ header {
 
     .bottom-header {
 
+        -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
         padding: 0.5rem 0;
 
@@ -328,6 +329,7 @@ header {
                     padding: 0.25rem 0.5rem;
                     border: 1px solid var(--grey-color);
                     border-radius: 0.5rem;
+                    -webkit-animation: popup 1.5s linear forwards;
                     animation: popup 1.5s linear forwards;
                     transform: translateY(3rem);
                     opacity: 0;
@@ -337,6 +339,7 @@ header {
 
                 h1 {
 
+                    -webkit-animation: popup 1.5s linear 0.3s forwards;
                     animation: popup 1.5s linear 0.3s forwards;
                     transform: translateY(3rem);
                     opacity: 0;
@@ -347,7 +350,9 @@ header {
                     span {
 
                         color: transparent;
+                        -webkit-background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
                         background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
+                        -webkit-background-clip: text;
                         background-clip: text;
 
                     }
@@ -355,6 +360,7 @@ header {
 
                 p {
 
+                    -webkit-animation: popup 1.5s linear 0.5s forwards;
                     animation: popup 1.5s linear 0.5s forwards;
                     transform: translateY(3rem);
                     opacity: 0;
@@ -367,6 +373,7 @@ header {
 
                 .hero-section-link {
 
+                    -webkit-animation: popup 1.5s linear 0.7s forwards;
                     animation: popup 1.5s linear 0.7s forwards;
                     transform: translateY(3rem);
                     opacity: 0;
@@ -430,6 +437,16 @@ header {
 
 
 /* HERO SECTION INFO ANIMATION */
+
+@-webkit-keyframes popup {
+
+    100% {
+        opacity: 1;
+        transform: translatey(0);
+    }
+
+}
+
 @keyframes popup {
 
     100% {
@@ -440,6 +457,23 @@ header {
 }
 
 /* HERO SECTION IMAGE ANIMATION */
+
+@-webkit-keyframes bounce {
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    80% {
+        transform: translateY(2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
 @keyframes bounce {
 
     50% {
@@ -545,6 +579,7 @@ header {
 
 
 /* HERO SECTION CUSTOM BREAK POINT 946px*/
+
 @media only screen and (max-width:910px) {
     .hero-section {
         .hero-section-container {
@@ -580,7 +615,9 @@ header {
     }
 }
 
+
 /* HERO SECTION CUSTOM BREAK POINT 349px*/
+
 @media only screen and (max-width:394px) {
     .hero-section {
         .hero-section-container {
@@ -682,6 +719,13 @@ header {
             height: 2rem;
             z-index: 5;
             margin-top: 2.5rem;
+
+            -webkit-mask-image: linear-gradient(to right,
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 1) 20%,
+                    rgba(0, 0, 0, 1) 80%,
+                    rgba(0, 0, 0, 0));
+
             mask-image: linear-gradient(to right,
                     rgba(0, 0, 0, 0),
                     rgba(0, 0, 0, 1) 20%,
@@ -696,6 +740,7 @@ header {
                 height: 2rem;
                 position: absolute;
                 gap: 5rem;
+                -webkit-animation: slide-out-in 30s linear infinite;
                 animation: slide-out-in 30s linear infinite;
                 right: 100%;
 
@@ -706,6 +751,7 @@ header {
                     font-weight: 600;
                     font-weight: 500;
                     font-size: 1.2rem;
+                    -webkit-white-space: no-wrap;
                     white-space: no-wrap;
                 }
             }
@@ -722,6 +768,7 @@ header {
 .section2 {
 
     background-color: var(--white--color);
+    -webkit-animation: fade-pop-in ease-in 1s forwards;
     animation: fade-pop-in ease-in 1s forwards;
 
     .box2 {
@@ -771,6 +818,7 @@ header {
 
                         color: transparent;
                         background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
+                        -webkit-background-clip: text;
                         background-clip: text;
 
                     }
@@ -834,6 +882,7 @@ header {
                         line-height: 1.5rem;
                         display: -webkit-box;
                         -webkit-line-clamp: 7;
+                        line-clamp: 7;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
 
@@ -864,6 +913,16 @@ header {
 
 /* SECTION 2 SLIDER ANIMATION */
 
+@-webkit-keyframes slide-out-in {
+
+
+    100% {
+        right: -300%;
+    }
+
+
+}
+
 @keyframes slide-out-in {
 
 
@@ -876,6 +935,21 @@ header {
 
 
 /* SECTION 2 SLIDER ANIMATION */
+
+@-webkit-keyframes fade-pop-in {
+
+    0% {
+
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes fade-pop-in {
 
@@ -979,6 +1053,7 @@ header {
             text-align: center;
             width: 540px;
             gap: 1.5rem;
+            -webkit-animation: fade-pop-in-section3 ease-in 1s forwards;
             animation: fade-pop-in-section3 ease-in 1s forwards;
 
             a {
@@ -1000,7 +1075,9 @@ header {
 
                 span {
                     color: transparent;
+                    -webkit-background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
                     background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
+                    -webkit-background-clip: text;
                     background-clip: text;
                 }
             }
@@ -1032,6 +1109,7 @@ header {
                 color: var(--white--color);
                 border-radius: 20px;
                 padding: 2.5rem;
+                -webkit-animation: fade-pop-in-section3 ease-in 1s forwards;
                 animation: fade-pop-in-section3-box2 1.5s linear forwards;
                 transform: translateY(3rem);
                 opacity: 0;
@@ -1053,8 +1131,10 @@ header {
                         text-decoration: none;
                         border-radius: 15px;
                         font-size: 0.8rem;
+                        -webkit-background-image: linear-gradient(to right, plum 10%, yellow 20%, cyan 40%, rgb(213, 84, 213) 60%, orange 80%, plum 90%);
                         background-image: linear-gradient(to right, plum 10%, yellow 20%, cyan 40%, rgb(213, 84, 213) 60%, orange 80%, plum 90%);
                         background-size: 300%;
+                        -webkit-animation: move 1.5s linear infinite reverse;
                         animation: move 1.5s linear infinite reverse;
                         background-clip: text;
                         color: transparent;
@@ -1118,6 +1198,7 @@ header {
                 border-radius: 30px;
                 padding: 2.5rem;
                 align-self: flex-end;
+                -webkit-animation: fade-pop-in-section3-box2 1.5s linear 0.4s forwards;
                 animation: fade-pop-in-section3-box2 1.5s linear 0.4s forwards;
                 transform: translateY(3rem);
                 opacity: 0;
@@ -1142,9 +1223,12 @@ header {
                         text-decoration: none;
                         border-radius: 15px;
                         font-size: 0.9rem;
+                        -webkit-background-image: linear-gradient(to right, plum 10%, yellow 20%, cyan 40%, rgb(213, 84, 213) 60%, orange 80%, plum 90%);
                         background-image: linear-gradient(to right, plum 10%, yellow 20%, cyan 40%, rgb(213, 84, 213) 60%, orange 80%, plum 90%);
                         background-size: 300%;
+                        -webkit-animation: move 1.5s linear infinite reverse;
                         animation: move 1.5s linear infinite reverse;
+                        -webkit-background-clip: text;
                         background-clip: text;
                         color: transparent;
 
@@ -1152,7 +1236,9 @@ header {
                 }
 
                 h4 {
+
                     font-size: 1rem;
+
                 }
 
 
@@ -1206,6 +1292,7 @@ header {
                 padding: 2.5rem;
                 align-self: flex-end;
                 justify-content: center;
+                -webkit-animation: fade-pop-in-section3-box2 1.5s linear 0.8s forwards;
                 animation: fade-pop-in-section3-box2 1.5s linear 0.8s forwards;
                 transform: translateY(3rem);
                 opacity: 0;
@@ -1226,9 +1313,12 @@ header {
                         text-decoration: none;
                         border-radius: 15px;
                         font-size: 0.9rem;
+                        -webkit-background-image: linear-gradient(to right, plum 10%, yellow 20%, cyan 40%, rgb(213, 84, 213) 60%, orange 80%, plum 90%);
                         background-image: linear-gradient(to right, plum 10%, yellow 20%, cyan 40%, rgb(213, 84, 213) 60%, orange 80%, plum 90%);
                         background-size: 300%;
+                        -webkit-animation: move 1.5s linear infinite reverse;
                         animation: move 1.5s linear infinite reverse;
+                        -webkit-background-clip: text;
                         background-clip: text;
                         color: transparent;
                     }
@@ -1284,6 +1374,22 @@ header {
 
 
 /* SECTION3 ANIMATION */
+
+@-webkit-keyframes fade-pop-in-section3 {
+
+    0% {
+
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fade-pop-in-section3 {
 
     0% {
@@ -1301,12 +1407,37 @@ header {
 
 
 /* SECTION3 BOX2 ANIMATION */
+
+@-webkit-keyframes fade-pop-in-section3-box2 {
+
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fade-pop-in-section3-box2 {
 
     100% {
 
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes move {
+
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: center;
+    }
+
+    100% {
+        background-position: right;
     }
 }
 
@@ -1447,7 +1578,9 @@ header {
 
                 span {
                     color: transparent;
+                    -webkit-background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
                     background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
+                    -webkit-background-clip: text;
                     background-clip: text;
                 }
             }
@@ -1472,6 +1605,13 @@ header {
                 overflow: hidden;
                 margin: 0 auto;
                 margin-top: 2.5rem;
+
+                -webkit-mask-image: linear-gradient(to bottom,
+                        rgba(0, 0, 0, 0),
+                        rgba(0, 0, 0, 1) 20%,
+                        rgba(0, 0, 0, 1) 80%,
+                        rgba(0, 0, 0, 0));
+
                 mask-image: linear-gradient(to bottom,
                         rgba(0, 0, 0, 0),
                         rgba(0, 0, 0, 1) 20%,
@@ -1487,6 +1627,7 @@ header {
                     gap: 2rem;
                     height: 4500px;
                     transform: translateY(18%);
+                    -webkit-animation: slide-up-down 60s linear infinite;
                     animation: slide-up-down 60s linear infinite;
 
 
@@ -1497,12 +1638,14 @@ header {
                         border: 1px solid black;
                         display: grid;
                         gap: 2rem;
+                        -webkit-box-shadow: 0px 7px 14px #eaeaea;
                         box-shadow: 0px 7px 14px #eaeaea;
 
                         p {
 
                             font-size: 1rem;
                             line-height: 2rem;
+
                         }
 
                         .profile-div {
@@ -1533,6 +1676,7 @@ header {
                     gap: 2rem;
                     transform: translateY(18%);
                     height: 4500px;
+                    -webkit-animation: slide-up-down 60s linear 2s infinite;
                     animation: slide-up-down 60s linear 2s infinite;
 
                     .box1 {
@@ -1581,10 +1725,12 @@ header {
                     gap: 2rem;
                     transform: translateY(18%);
                     height: 4500px;
+                    -webkit-animation: slide-up-down 60s linear 4s infinite;
                     animation: slide-up-down 60s linear 4s infinite;
 
                     .box1 {
 
+                        -webkit-animation: slide-up-down 56s linear infinite;
                         animation: slide-up-down 56s linear infinite;
                         box-shadow: 0px 7px 14px #eaeaea;
                         border-radius: 20px;
@@ -1719,6 +1865,7 @@ header {
 .section5 {
 
     padding: 6rem 0;
+    -webkit-background: linear-gradient(var(--white--color), #d2dcff);
     background: linear-gradient(var(--white--color), #d2dcff);
 
     .section5-container {
@@ -1747,7 +1894,9 @@ header {
 
                 span {
                     color: transparent;
+                    -webkit-background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
                     background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
+                    -webkit-background-clip: text;
                     background-clip: text;
                 }
             }
@@ -1869,6 +2018,7 @@ header {
 .section6 {
 
     background-color: white;
+    -webkit-animation: fade-pop-in-section6 ease-in 1s forwards;
     animation: fade-pop-in-section6 ease-in 1s forwards;
 
     .section6-container {
@@ -1905,7 +2055,9 @@ header {
 
                 span {
                     color: transparent;
+                    -webkit-background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
                     background: linear-gradient(#000000 35%, rgb(1, 1, 104) 40%);
+                    -webkit-background-clip: text;
                     background-clip: text;
                 }
             }
@@ -1924,6 +2076,7 @@ header {
 
                 transform: translateY(3rem);
                 opacity: 0;
+                -webkit-animation: fade-pop-in-section6-faq 1.5s linear forwards;
                 animation: fade-pop-in-section6-faq 1.5s linear forwards;
 
                 #toggle {
@@ -1987,6 +2140,7 @@ header {
 
                 transform: translateY(3rem);
                 opacity: 0;
+                -webkit-animation: fade-pop-in-section6-faq 1.5s linear 0.3s forwards;
                 animation: fade-pop-in-section6-faq 1.5s linear 0.3s forwards;
 
                 #faq2 {
@@ -2056,6 +2210,7 @@ header {
 
                 transform: translateY(3rem);
                 opacity: 0;
+                -webkit-animation: fade-pop-in-section6-faq 1.5s linear 0.6s forwards;
                 animation: fade-pop-in-section6-faq 1.5s linear 0.6s forwards;
 
                 #faq3 {
@@ -2129,6 +2284,7 @@ header {
 
                 transform: translateY(3rem);
                 opacity: 0;
+                -webkit-animation: fade-pop-in-section6-faq 1.5s linear 0.9s forwards;
                 animation: fade-pop-in-section6-faq 1.5s linear 0.9s forwards;
 
                 #faq4 {
@@ -2198,6 +2354,7 @@ header {
 
                 transform: translateY(3rem);
                 opacity: 0;
+                -webkit-animation: fade-pop-in-section6-faq 1.5s linear 1.2s forwards;
                 animation: fade-pop-in-section6-faq 1.5s linear 1.2s forwards;
 
                 #faq5 {
@@ -2270,6 +2427,22 @@ header {
 }
 
 /* SECTION6 KEYFRAME ANIMATION */
+
+@-webkit-keyframes fade-pop-in-section6 {
+
+    0% {
+
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fade-pop-in-section6 {
 
     0% {
@@ -2286,6 +2459,16 @@ header {
 }
 
 /* SECTION6-FAQ KEYFRAME ANIMATION */
+
+@-webkit-keyframes fade-pop-in-section6-faq {
+
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fade-pop-in-section6-faq {
 
     100% {
@@ -2332,10 +2515,6 @@ header {
                         .faq-icon {
                             gap: 0.5rem;
 
-                            h3 {
-                                /* font-size: 1rem; */
-                                /* flex-shrink: 3; */
-                            }
 
                             .plus-svg {
 
