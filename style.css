@@ -19,13 +19,14 @@
 }
 
 html {
+
+    -webkit-scroll-behavior: smooth;
     scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-family-serif);
     background-color: #d2dcff54;
-    /* background-color: rgba(59, 130, 246, 0.1); */
 }
 
 /* styling the header */
