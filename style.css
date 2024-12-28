@@ -417,6 +417,7 @@ header {
 
             .hero-section-container-image {
 
+                -webkit-animation: bounce 10s linear infinite;
                 animation: bounce 10s linear infinite;
                 width: 645.33px;
                 flex-grow: 2;
